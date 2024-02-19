@@ -1,0 +1,67 @@
+body{
+  background-image: linear-gradient(to bottom, #030420, #000000 70%);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial;
+}
+
+p{
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.language-python{
+  margin-left: 20px;
+  width:350px
+}
+
+#solutionSection{
+  display: grid;
+
+}
+
+img{
+  height:200px;
+  width:400px;
+  object-fit: contain;
+  object-position: center;
+}
+
+#prevBtn{
+  height: 40px;
+  width: 60px;
+  background-color: rgb(199, 187, 217);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 8px;
+  transition: background-color 0.15s;
+}
+#prevBtn:hover{
+  background-color: rgb(157, 127, 190);
+}
+
+#nexBtn:active{
+  opacity: 0.7;
+}
+
+#nexBtn{
+  height: 40px;
+  width: 60px;
+  background-color: rgb(199, 187, 217);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 8px;
+  transition: background-color 0.15s;
+}
+#nexBtn:hover{
+  background-color: rgb(157, 127, 190);
+}
+
+#nexBtn:active{
+  opacity: 0.7;
+}
+
+#buttons-page{
+  margin-top: 10px;
+  margin-left: 140px;
+}

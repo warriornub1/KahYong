@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+  <div class = "btn-Section">
+    <button id = "hashingBtn" onclick = "openForm()">Hashing</button>
+    <div id = "pop-Up-Hashing">
+      <p>Basic Data Structures:</p>
+      <a href = "Hashing/ContainsDuplicate.html">Contains Duplicate</a>
+    </div>
+    
+    <button>Two Pointer</button>
+    <button>Stack</button>
+    <button>Binary Search</button>
+    <button onClick= "redirect()">Contact Me</button>
+  </div>
+
+  <script type = "text/javascript">
+    let hrElement;
+    let counter = 100;
+    let hasBtnOpen = false;
+
+    for (let i = 0; i < counter; i++) {
+      hrElement = document.createElement("HR");
+      hrElement.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+      hrElement.style.animationDuration = 0.2 + Math.random() * 0.3 + "s";
+      hrElement.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(hrElement);
+    }
+    
+    function openForm() {
+      let hashBtn = document.getElementById("hashingBtn")
+      if(hasBtnOpen)
+      {
+        console.log("close");
+        document.getElementById("pop-Up-Hashing").style.display = "none";
+        hashBtn.style.backgroundColor = "rgb(199, 187, 217)";
+      }
+      else
+      {
+        console.log("open");
+        document.getElementById("pop-Up-Hashing").style.display = "block";
+        hashBtn.style.backgroundColor = "rgb(157, 127, 190)";
+      }
+      hasBtnOpen = ~hasBtnOpen;
+    }
+
+    function redirect(){
+      location.href = "ContactMe.html";
+    }
+  </script>
+</body>
+</html>

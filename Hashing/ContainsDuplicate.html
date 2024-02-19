@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <link rel = "stylesheet" href = "ContainsDuplicate.css">
+  <title>217. Contains Duplicate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+</head>
+
+<body>
+  <div class = "main-Section">
+
+    <h1>217. Contains Duplicate</h1>
+    <p id = "pg">Given an integer array <code>nums</code>, return <code>true</code> if any value appears <strong>least twice</strong> in the array, and return <code>false</code> if every element is distinct.</p>
+    <div id = "Example1">
+      <p><strong>Example 1:</strong></p>
+        <p><strong>Input:</strong> num = [1,2,3,1]</p>
+        <p><strong>Output:</strong> True</p>
+    </div>
+  
+    <div id = "Example2">
+      <p><strong>Example 2:</strong></p>
+        <p><strong>Input:</strong> num = [1,2,3,1]</p>
+        <p><strong>Output:</strong> True</p>
+    </div>
+  
+    <hr>
+      <h2>Python Solution</h2>
+      <h2>Solution</h2>
+      <div id = "solutionSection">
+        <p>In a set(), there can be no duplicated items & the it takes O(1) to add into a set().
+          <br><br> Loop through each value in the list using a for loop and append each element using a set() in Python.
+          <br><br>If the element is already in the set(), that means that duplication exists. Return True
+          <br><br>If the loop completes, that means that no duplicated element exists. Return False. 
+          <br><br> <strong>Time Complexity</strong> : O(n) as in the worst case scenario, the algorithm loops through each element in the list and O(1) for HashSet.add() 
+          <br><br> <strong>Memory Complexity</strong> : O(n) as in the worst case scenario, the algorithm adds all elements in the list into the set. 
+          <pre>
+          <code class = "language-python">
+def containsDuplicate(self, nums):
+  hashset = set()
+
+  for n in nums:
+      if n in hashset:
+          return True
+      hashset.add(n)
+  return False
+          </code>
+        </pre>
+        <img src = "../Images/ContainsDuplicate/Slide1.JPG" width = 800px height = 600px>
+
+      </div>
+
+      <div id = "buttons-page">
+        <button id = "prevBtn">Prev</button>
+        <button id = "nexBtn">Next</button>
+      </div>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<script>
+
+  hljs.highlightAll();
+  var images = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG", "Slide6.JPG", "Slide7.JPG", "Slide8.JPG"]
+  var index = 0;
+
+  imgSrc = document.querySelector("img");
+  nextBtn = document.querySelector("#nexBtn");
+  prevBtn = document.querySelector("#prevBtn");
+  
+  nextBtn.addEventListener("click", () =>{
+    index ++;
+    if (index === images.length){
+      index = 0;
+    }
+    imgSrc.src = "../Images/ContainsDuplicate/" + images[index];
+    console.log(index);
+  });
+
+
+  prevBtn.addEventListener("click", () =>{
+    index --;
+    if (index < 0){
+      index = images.length - 1;
+    }
+    imgSrc.src = "../Images/ContainsDuplicate/" + images[index];
+    console.log(index);
+  });
+</script>
