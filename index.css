@@ -34,6 +34,9 @@ body {
   font-family: "Open Sans";
  }
 
+ .selfIntro_card .personal-project{
+  color: white
+ }
  .selfIntro_card .email_link{
   margin-left: 40px;
   text-decoration: none;
