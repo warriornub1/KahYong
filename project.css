@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(to bottom, #030420, #000000 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* rain drop */
+hr{
+  width: 50px;
+  border-color: transparent;
+  border-right-color: rgba(255, 255, 255, 0.7);
+  border-right-width: 50px;
+  position: absolute;
+  bottom: 100%;
+  transform-origin: 100% 50%;
+  animation-name: rain;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* rain drop annimation */
+@keyframes rain {
+  from {
+   transform: rotate(105deg) translateX(0);
+  }
+  to {
+   transform: rotate(105deg) translateX(calc(100vh + 20px));
+  }
+ }
+
+ .btn-Section{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 700px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+ }
+
+
+ button{
+  font-family: "Montserrat";
+  font-size: 25px;
+  background-color: rgb(199, 187, 217);
+  cursor: pointer;
+  transition: background-color 0.15s;
+ }
+
+ button:hover{
+  background-color: rgb(157, 127, 190);
+ }
+
+ .btn-Section #pop-Up-Hashing{
+  display: none;
+  font-family: "Open Sans";
+  background-color: rgb(0, 0, 0);
+  color:white;
+  margin-left: 10px;
+  font-size: 20px;
+ }

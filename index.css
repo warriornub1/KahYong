@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(to bottom, #030420, #000000 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+ .selfIntro_card #git{
+  margin-left: 40px;
+  color: white;
+  font-size: 120px;
+  font-family: "Montserrat";
+ }
+ 
+ h2{
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+  color: white;
+  font-size: 72px;
+ }
+
+ p{
+  margin-left: 40px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 30px;
+  font-family: "Open Sans";
+ }
+
+ .selfIntro_card .email_link{
+  margin-left: 40px;
+  text-decoration: none;
+  color: #8DB2E5;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Open Sans";
+ }
+
+ .selfIntro_card .social_links{
+  display: grid;
+  grid-template-columns: 100px 100px;
+  column-gap: 10px;
+  margin-left: 40px;
+ }
